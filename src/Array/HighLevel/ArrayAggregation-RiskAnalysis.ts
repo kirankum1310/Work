@@ -1,16 +1,19 @@
+//Portfolio
 type Loan = {
   loanId: number;
   customer: string;
   amount: number;
-  type: "Home" | "Car" | "Personal";
+  type: "Home" | "Car" | "Personal" | "Education";
   overdue: boolean;
 };
 
+//Input data
 let loans: Loan[] = [
   { loanId: 101, customer: "Alice", amount: 500000, type: "Home", overdue: false },
   { loanId: 102, customer: "Bob", amount: 300000, type: "Car", overdue: true },
   { loanId: 103, customer: "Charlie", amount: 100000, type: "Personal", overdue: false },
-  { loanId: 104, customer: "David", amount: 750000, type: "Home", overdue: true }
+  { loanId: 104, customer: "David", amount: 750000, type: "Home", overdue: true },
+  { loanId: 105, customer: "Alice", amount: 200000, type: "Education", overdue: true }
 ];
 
 // Group loan amounts by type
