@@ -38,10 +38,7 @@ class NetBankingPayment extends PaymentProcessor {
   }
 }
 
-
 // Interface Example (Extra Abstraction Layer)
-
-
 interface TransactionLogger {
   logTransaction(type: string, amount: number): void;
 }
@@ -53,11 +50,9 @@ class Logger implements TransactionLogger {
   }
 }
 
-
 // Main Application
-
-
 // Create payment processors
+
 const credit = new CreditCardPayment();
 const upi = new UPIPayment();
 const net = new NetBankingPayment();
@@ -79,6 +74,16 @@ net.generateInvoice(5000);
 logger.logTransaction("NetBanking", 5000);
 
 
-// ========================
-// Output Print panugha bro
-
+// ==========================================================
+//          Output
+// ==========================================================
+// 
+// Processing credit card payment of ₹2500
+// Invoice generated for ₹2500
+// 📝 Transaction Logged → Type: Credit Card, Amount: ₹2500
+// 📱 Processing UPI payment of ₹1200
+// Invoice generated for ₹1200
+// 📝 Transaction Logged → Type: UPI, Amount: ₹1200        
+// 🏦 Processing NetBanking payment of ₹5000
+// Invoice generated for ₹5000
+// 📝 Transaction Logged → Type: NetBanking, Amount: ₹5000 
