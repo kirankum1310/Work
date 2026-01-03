@@ -18,7 +18,7 @@ class Stripe implements PaymentGateway {
 
 class Razorpay implements PaymentGateway {
   pay(amount: number): void {
-    console.log(`🏦 Paying ₹${amount} using Razorpay.`);
+    console.log(`🏦 Paying $${amount} using Razorpay.`);
   }
 }
 
