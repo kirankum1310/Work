@@ -69,7 +69,7 @@ class Teacher extends User {
   }
 }
 
-class Admin extends User {
+class Principal extends User {
   private department: string;
 
   constructor(name: string, age: number, department: string) {
@@ -79,7 +79,7 @@ class Admin extends User {
 
   // override method
   getDetails(): string {
-    return `🛠️ Admin: ${this.name}, Department: ${this.department}`;
+    return `🛠️ Principal: ${this.name}, Department: ${this.department}`;
   }
 }
 
@@ -101,7 +101,7 @@ const s2 = new Student("Bob", 21, "B");
 const t1 = new Teacher("Mr. Smith", 40, "Mathematics");
 const t2 = new Teacher("Ms. Johnson", 35, "Physics");
 
-const a1 = new Admin("Principal Rao", 50, "Administration");
+const a1 = new Principal("Mr. Rao", 50, "Administration");
 
 // =======================
 // EXECUTION
