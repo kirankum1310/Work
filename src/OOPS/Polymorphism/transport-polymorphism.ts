@@ -13,7 +13,6 @@ function Log(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
     console.log(`✅ [LOG] ${propertyKey} finished in ${Date.now() - start}ms`);
     return result;
   };
-  return descriptor;
 }
 
 /////////////////////////////
@@ -186,7 +185,7 @@ class BookingService {
   constructor(private repository: Repository<{ id: string; type: string; fare: number }>) {}
 
   @Log
-  async makeBooking(type: TransportType, distance: number) {
+  async makeBooking(type: TransportType, distance: number, result: any = null): Promise<{ ticketId: string; type: string; fare: number }> {
     const transport = TransportFactory.createTransport(type);
     const fare = transport.calculateFare(distance);
     const ticketId = await transport.bookTicket();
