@@ -16,4 +16,4 @@ function Alphabet(rows: number): void {
   }
 }
 
-Alphabet(5);
+Alphabet(6);

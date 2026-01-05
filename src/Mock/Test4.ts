@@ -5,7 +5,7 @@ function printHollowSquare(size: number): void {
     for (let j = 1; j <= size; j++) {
    
       if (i === 1 || i === size || j === 1 || j === size) {
-        line += "$ ";
+        line += " ";
       } else {
         line += "  ";
       }
